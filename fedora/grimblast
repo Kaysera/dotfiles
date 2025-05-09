@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo dnf install -y grim slurp hyprpicker wl-copy jq notify-send
+
+git clone https://github.com/hyprwm/contrib/ /tmp/contrib
+cd /tmp/contrib/grimblast
+sudo make
+sudo make install

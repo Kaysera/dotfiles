@@ -1,0 +1,3 @@
+#!/bin/bash
+
+flatpak install flathub --system -y app.zen_browser.zen

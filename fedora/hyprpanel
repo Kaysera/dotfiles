@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# ./astal # Uncomment line if astal is not installed
+# ./ags   # Uncomment line if astal is not installed
+
+sudo dnf copr enable solopasha/hyprland
+sudo dnf copr enable heus-sueh/packages
+sudo dnf config-manager --save --setopt=copr:copr.fedorainfracloud.org:heus-sueh:packages.priority=200
+
+sudo dnf install -y wireplumber upower libgtop2 bluez bluez-tools grimblast hyprpicker btop NetworkManager wl-clipboard swww brightnessctl gnome-bluetooth power-profiles-daemon gvfs nodejs
+
+npm install -g sass
+
+flatpak install flathub --system com.dec05eba.gpu_screen_recorder
+
+git clone https://github.com/Jas-SinghFSU/HyprPanel.git /tmp/HyprPanel
+cd /tmp/HyprPanel
+meson setup build
+meson compile -C build
+meson install -C build
+
+./scripts/install_fonts.sh

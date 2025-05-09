@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo dnf install -y go
+
+cd /tmp/astal/lang/gjs
+meson setup --prefix /usr build
+meson install -C build
+
+git clone https://github.com/aylur/ags.git /tmp/git/ags
+cd /tmp/git/ags
+go install -ldflags "\
+    -X 'main.gtk4LayerShell=$(pkg-config --variable=libdir gtk4-layer-shell-0)/libgtk4-layer-shell.so' \
+    -X 'main.astalGjs=$(pkg-config --variable=srcdir astal-gjs)'"
+
+sudo mv ~/go/bin/ags /usr/bin/ags

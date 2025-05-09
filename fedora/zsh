@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo dnf install -y zsh fzf zoxide fira-code-fonts
+chsh -s $(which zsh)
+git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:=~}/.antidote
+curl -sS https://starship.rs/install.sh | sh

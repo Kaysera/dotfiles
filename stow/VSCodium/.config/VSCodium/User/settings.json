@@ -1,0 +1,32 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.enableSmartCommit": true,
+    "security.workspace.trust.enabled": false,
+    "window.restoreWindows": "folders",
+    "git.confirmSync": false,
+    "editor.rulers": [
+        120
+    ],
+    "editor.fontFamily": "Fira Code, Consolas",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "450",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontWeight": "450",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "catppuccin.italicKeywords": false,
+    "catppuccin.boldKeywords": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+    },
+    "ruff.fixAll": true,
+    "ruff.organizeImports": true,
+    "python.createEnvironment.trigger": "off",
+    
+}

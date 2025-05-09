@@ -1,0 +1,19 @@
+# The big three
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+# Autocompletion improvement
+zsh-users/zsh-history-substring-search
+
+# Completion styles
+belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
+
+# Fuzzy Find Completion
+aloxaf/fzf-tab
+
+# Oh My Zsh
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/ssh
+ohmyzsh/ohmyzsh path:plugins/uv

@@ -29,3 +29,20 @@ In order to link any configuration, run
 stow <program> -t ~
 ```
 
+## Look and feel
+### Desktop
+![image](https://github.com/user-attachments/assets/356a84fc-6cb2-44ce-9317-c986d37173ce)
+
+### Terminal
+![image](https://github.com/user-attachments/assets/50ef0c8a-68a6-4a6a-8284-b8cc6e6503d9)
+
+### IDE
+![image](https://github.com/user-attachments/assets/aa4a019c-d89d-4f03-ab13-b0797f5f5773)
+
+### Web Browser
+![image](https://github.com/user-attachments/assets/af88d280-2785-48a4-9228-ee66be85dd76)
+
+
+
+
+

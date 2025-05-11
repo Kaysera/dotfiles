@@ -1,12 +1,12 @@
 # Setup Aliases
 alias vim=nvim
 alias sudo='sudo '
-
+alias ls='ls --color' 
 # Load shell prompt
 eval "$(starship init zsh)"
 
 # Source Antidote (plugin manager)
-source /home/guille/.antidote/antidote.zsh
+source  ~/.antidote/antidote.zsh
 
 # Initialize plugins
 antidote load
@@ -48,4 +48,5 @@ export _ZO_FZF_OPTS="${FZF_DEFAULT_OPTS} --preview='ls --color $realpath'"
 
 # Shell integrations
 eval "$(fzf --zsh)"
+export PATH=$PATH:~/.local/bin
 eval "$(zoxide init --cmd cd zsh)"

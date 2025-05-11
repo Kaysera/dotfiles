@@ -1,7 +1,8 @@
 # Setup Aliases
 alias vim=nvim
 alias sudo='sudo '
-alias ls='ls --color' 
+alias ls='ls --color'
+
 # Load shell prompt
 eval "$(starship init zsh)"
 
@@ -11,13 +12,16 @@ source  ~/.antidote/antidote.zsh
 # Initialize plugins
 antidote load
 
-# Load completions
-autoload -U compinit && compinit
+# Shell integrations
+eval "$(fzf --zsh)"
+export PATH=$PATH:~/.local/bin
+eval "$(zoxide init --cmd cd zsh)"
 
 # Completion styling
-zstyle ':completion:*' menu no
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:complete:*' fzf-preview 'if [ -d $realpath ]; then ls --color $realpath; else bat --color=always $realpath; fi'
+zstyle ':plugin:ez-compinit' 'compstyle' 'gremlin'
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
 # Keybindings
 bindkey '^[[A' history-substring-search-up
@@ -46,7 +50,3 @@ export FZF_DEFAULT_OPTS=" \
 
 export _ZO_FZF_OPTS="${FZF_DEFAULT_OPTS} --preview='ls --color $realpath'"
 
-# Shell integrations
-eval "$(fzf --zsh)"
-export PATH=$PATH:~/.local/bin
-eval "$(zoxide init --cmd cd zsh)"

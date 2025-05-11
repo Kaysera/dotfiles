@@ -1,3 +1,6 @@
+# The best autocomplete
+mattmc3/ez-compinit
+
 # The big three
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
@@ -11,9 +14,9 @@ belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_se
 
 # Fuzzy Find Completion
 aloxaf/fzf-tab
+ajeetdsouza/zoxide
 
 # Oh My Zsh
 ohmyzsh/ohmyzsh path:plugins/command-not-found
-ohmyzsh/ohmyzsh path:plugins/docker
 ohmyzsh/ohmyzsh path:plugins/ssh
 ohmyzsh/ohmyzsh path:plugins/uv

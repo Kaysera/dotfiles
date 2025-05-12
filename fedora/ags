@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sudo dnf install -y go
+sudo dnf install -y go meson cmake
 
+git clone https://github.com/aylur/astal /tmp/astal
 cd /tmp/astal/lang/gjs
 meson setup --prefix /usr build
 meson install -C build

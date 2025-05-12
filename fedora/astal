@@ -1,3 +1,12 @@
 #!/bin/bash
 
-sudo dnf install astal swww sass
+sudo dnf install -y meson vala valadoc gtk3-devel gtk-layer-shell-devel gobject-introspection-devel wayland-protocols-devel astal swww sass
+git clone https://github.com/aylur/astal.git /tmp/astal
+
+cd /tmp/astal/lib/astal/io
+meson setup --prefix /usr build
+meson install -C build
+
+cd /tmp/astal/lib/astal/gtk3
+meson setup --prefix /usr build
+meson install -C build

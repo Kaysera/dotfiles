@@ -423,8 +423,8 @@
         "notifications"
       ]
     }
- },
-  "bar.windowtitle.custom_title": false,
+  },
+  "bar.windowtitle.custom_title": true,
   "bar.windowtitle.label": true,
   "bar.windowtitle.icon": false,
   "bar.network.showWifiInfo": true,

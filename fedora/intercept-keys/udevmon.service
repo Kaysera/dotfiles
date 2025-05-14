@@ -1,0 +1,13 @@
+[Unit]
+Description=Interception udevmon
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/local/bin/udevmon -c /etc/interception/udevmon.yaml
+Restart=on-failure
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -3,6 +3,9 @@ alias vim=nvim
 alias sudo='sudo '
 alias ls='ls --color'
 
+# Setup nvim as sudo editor
+export SUDO_EDITOR='nvim'
+
 # Load shell prompt
 eval "$(starship init zsh)"
 

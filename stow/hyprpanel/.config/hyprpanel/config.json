@@ -407,35 +407,24 @@
     },
     "1": {
       "left": [
-        "dashboard",
+        "dashboard"
+      ],
+      "middle": [
         "workspaces",
         "windowtitle"
       ],
-      "middle": [
-        "media"
-      ],
       "right": [
         "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
         "clock",
         "notifications"
       ]
-    },
-    "2": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "notifications"
-      ]
     }
-  },
-  "bar.windowtitle.custom_title": true,
+ },
+  "bar.windowtitle.custom_title": false,
   "bar.windowtitle.label": true,
   "bar.windowtitle.icon": false,
   "bar.network.showWifiInfo": true,
@@ -456,7 +445,9 @@
     "1": "󰈹",
     "2": "󰨞",
     "3": "",
-    "4": "󰋜"
+    "4": "󰋜",
+    "9": "󰠮",
+    "10": "󰒱"
   },
   "menus.clock.time.military": true,
   "theme.bar.buttons.separator.margins": "0.1em",

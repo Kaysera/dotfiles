@@ -1,0 +1,27 @@
+#!/bin/bash
+
+sudo dnf install -y cmake g++ libevdev-devel systemd-devel yaml-cpp-devel boost-devel
+
+git clone https://gitlab.com/interception/linux/tools.git /tmp/interception-tools
+cd /tmp/interception-tools
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+cd build
+sudo make install
+
+git clone https://gitlab.com/interception/linux/plugins/dual-function-keys.git /tmp/dual-function-keys
+cd /tmp/dual-function-keys
+make
+sudo make install
+
+# IMPORTANT!!!
+# Edit udevmon.yaml for the proper name of the keyboard/keyboards
+# It can be listed using "sudo libinput list-devices | grep "^Device"
+# More information at https://github.com/EnigmaCurry/dual-function-keys
+sudo mkdir -p /etc/interception/udevmon.d
+sudo cp ~/dotfiles/fedora/intercept-keys/dual-role-caps.yaml /etc/interception
+sudo cp ~/dotfiles/fedora/intercept-keys/udevmon.yaml /etc/interception/udevmon.d/
+
+sudo cp ~/dotfiles/fedora/intercept-keys/udevmon.service /etc/systemd/system/
+sudo systemctl enable --now udevmon
+

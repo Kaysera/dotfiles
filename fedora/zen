@@ -1,3 +1,4 @@
 #!/bin/bash
 
 flatpak install flathub --system -y app.zen_browser.zen
+xdg-settings set default-web-browser app.zen_browser.zen.desktop

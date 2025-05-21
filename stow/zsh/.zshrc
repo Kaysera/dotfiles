@@ -26,9 +26,11 @@ zstyle ':fzf-tab:complete:*' fzf-preview 'if [ -d $realpath ]; then ls --color $
 zstyle ':plugin:ez-compinit' 'compstyle' 'gremlin'
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
-# Keybindings
+# Keybindings (For Windows and Linux)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
 
 # History configuration
 HISTSIZE=5000

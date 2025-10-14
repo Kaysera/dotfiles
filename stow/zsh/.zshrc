@@ -1,7 +1,10 @@
 # Setup Aliases
 alias vim=nvim
 alias sudo='sudo '
-alias ls='ls --color'
+alias ls='eza -h --icons=auto'
+alias codium="codium --enable-features=UseOzonePlatform --ozone-platform=wayland"
+alias code=codium
+alias task='go-task'
 
 # Setup nvim as sudo editor
 export SUDO_EDITOR='nvim'

@@ -1,0 +1,13 @@
+wget -O /tmp/eza.tar.gz https://github.com/eza-community/eza/releases/download/v0.23.4/eza_x86_64-unknown-linux-gnu.tar.gz
+tar -xzf /tmp/eza.tar.gz -C /tmp
+
+sudo mv /tmp/eza /usr/local/bin
+sudo chmod +x /usr/local/bin/eza
+
+wget -O /tmp/eza-man.tar.gz https://github.com/eza-community/eza/releases/download/v0.23.4/man-0.23.4.tar.gz
+tar -xzf /tmp/eza-man.tar.gz -C /tmp
+
+sudo mv /tmp/target/man-0.23.4/eza1 /usr/local/share/man/man1
+sudo mv /tmp/target/man-0.23.4/eza_colors.5 /usr/local/share/man/man5
+sudo mv /tmp/target/man-0.23.4/eza_colors-explanation.5 /usr/local/share/man/man5x
+

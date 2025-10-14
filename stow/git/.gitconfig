@@ -1,5 +1,10 @@
 [user]
-	email = folez97@gmail.com
+	email = guillermo.fernandez@taidy.io
 	user = "Guillermo Fernandez"
+	name = Guillermo Fernandez
 [core]
-	editor = vim
+	editor = nvim
+[push]
+	autoSetupRemote = true
+[credential]
+	helper = store

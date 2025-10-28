@@ -8,3 +8,5 @@
 	autoSetupRemote = true
 [credential]
 	helper = store
+[diff]
+    external = difft

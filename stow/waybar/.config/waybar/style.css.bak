@@ -1,0 +1,168 @@
+/* -----------------------------------------------------------------------------
+ * Catppuccin Mocha Palette
+ * Note: Added more Catppuccin color definitions for completeness/accuracy
+ * -------------------------------------------------------------------------- */
+@define-color crust #11111b;    /* Main Panel/Menu Background (HyprPanel config) */
+@define-color base #1e1e2e;     /* Card Background (HyprPanel config) */
+@define-color mantle #181825;   /* Secondary Background */
+@define-color surface0 #313244; /* Border/Divider/Inactive Background */
+@define-color text #cdd6f4;     /* Foreground Text */
+@define-color blue #89b4fa;     
+@define-color lavender #b4befe; /* Common Button Accent in HyprPanel config */
+@define-color rosewater #f5c2e7; /* NEW: Workspace/Clock accent */
+@define-color mauve #cba6f7;    /* Used for network/updates accent */
+@define-color red #f38ba8;      
+@define-color green #a6e3a1;
+@define-color yellow #f9e2af;
+
+/* Map existing variables to Catppuccin Mocha */
+@define-color foreground @text; 
+@define-color accent_color @mauve; /* Keeping Mauve for workspace highlight */
+
+/* -----------------------------------------------------------------------------
+ * General Styles
+ * -------------------------------------------------------------------------- */
+* {
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'Iosevka Custom';
+}
+
+/* 1. Main Waybar Container: Set background to @crust (#11111b) with 60% opacity */
+window#waybar {
+    background-color: rgba(17, 17, 27, 0.6); 
+}
+
+/* Module Group Spacing (Force groups to transparent so they inherit the main bar's background) */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Hyprland Workspaces Module Styling
+ * -------------------------------------------------------------------------- */
+#workspaces {
+  /* Explicitly set the workspaces module wrapper itself to transparent */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#workspaces button {
+  /* Set inactive buttons to transparent background */
+  background-color: rgba(0, 0, 0, 0); 
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+  color: red;
+  /* Icon Size */
+  font-size: 20px; 
+}
+
+/* Highlight for the SELECTED (Active) Workspace */
+#workspaces button.active,
+#workspaces button.focused {
+  /* Change the icon color to Mauve (cba6f7) */
+  color: @rosewater; 
+  /* Retain background highlight for the active icon */
+  background-color: @surface0; /* #313244 */
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 4px; 
+  /* Optional: Add padding to the active button only for better background contrast */
+  padding: 0 10px; 
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+/* -----------------------------------------------------------------------------
+ * Individual Module Styles
+ * (Setting all other modules to transparent background as requested)
+ * -------------------------------------------------------------------------- */
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update,
+#clock,
+#tray,
+#bluetooth,
+#network {
+  background-color: rgba(0, 0, 0, 0); 
+  /* Remove padding from this group since we removed the background box */
+  padding: 0; 
+}
+
+/* Original Spacing/Minimum Width */
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 20px;
+}
+
+/* Tooltip (Popup) Style - Using a deeper color for the popup background */
+tooltip {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: @crust; /* Set to crust (#11111b) for full opacity, matching HyprPanel menus */
+  color: @foreground;
+}
+
+/* Custom Module Adjustments */
+#custom-update {
+  font-size: 14px; 
+  color: @yellow; /* Use a bright Catppuccin color for updates */
+}
+
+#clock {
+  margin-left: 8.75px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 16px; 
+}
+
+/* Changed recording indicator color to Catppuccin Red */
+#custom-screenrecording-indicator.active {
+  color: @red; 
+}

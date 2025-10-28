@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Install audio widgets
+sudo dnf install cargo pipewire-devel clang
+cargo install wiremix
+
+# Install wifi widgets
+sudo dnf install iwd
+cargo install impala
+# Ensure iwd service will be started
+sudo systemctl enable iwd.service
+
+# Prevent systemd-networkd-wait-online timeout on boot
+sudo systemctl disable systemd-networkd-wait-online.service
+sudo systemctl mask systemd-networkd-wait-online.service
+
+# Install power profiles
+sudo dnf instal power-profiles-daemon
+
+# Install bluetooth widgets
+sudo dnf install blueman
+sudo dnf install waybar 

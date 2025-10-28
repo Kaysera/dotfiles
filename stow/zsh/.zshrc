@@ -20,7 +20,7 @@ antidote load
 
 # Shell integrations
 eval "$(fzf --zsh)"
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin:~/.cargo/bin
 eval "$(zoxide init --cmd cd zsh)"
 
 # Completion styling
@@ -61,4 +61,3 @@ export FZF_DEFAULT_OPTS=" \
 --bind=tab:accept"
 
 export _ZO_FZF_OPTS="${FZF_DEFAULT_OPTS} --preview='ls --color $realpath'"
-

@@ -24,3 +24,5 @@ fpath+=( "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyz
 source "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/ssh/ssh.plugin.zsh"
 fpath+=( "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/uv" )
 source "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/plugins/uv/uv.plugin.zsh"
+fpath+=( "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-Kaysera-SLASH-go-task-antidote-plugin" )
+source "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-Kaysera-SLASH-go-task-antidote-plugin/go-task-antidote-plugin.plugin.zsh"

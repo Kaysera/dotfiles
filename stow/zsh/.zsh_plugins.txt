@@ -23,3 +23,6 @@ ajeetdsouza/zoxide
 ohmyzsh/ohmyzsh path:plugins/command-not-found
 ohmyzsh/ohmyzsh path:plugins/ssh
 ohmyzsh/ohmyzsh path:plugins/uv
+
+# Personal plugin for gotask
+Kaysera/go-task-antidote-plugin

@@ -64,7 +64,7 @@ window#waybar {
 #battery,
 #tray,
 #bluetooth,
-#custom-powermenu {
+#custom-power {
   background-color: @surface0;
   color: @text;
   padding: 0px;
@@ -125,6 +125,11 @@ window#waybar {
 
 #clock {
   color: @peach;
+}
+
+#custom-power {
+  color: @maroon;
+  font-weight: bold;
 }
 
 #battery {

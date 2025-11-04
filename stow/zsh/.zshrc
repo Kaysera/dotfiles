@@ -5,6 +5,9 @@ alias ls='eza -h --icons=auto'
 alias codium="codium --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias code=codium
 alias task='go-task'
+alias gcm="git commit -m"
+alias gcam="git commit -a -m"
+alias lg="lazygit"
 
 # Setup nvim as sudo editor
 export SUDO_EDITOR='nvim'

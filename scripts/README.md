@@ -1,0 +1,2 @@
+- Replace the script path in ./hypr-display-switcher.service to reflect the full path of the executable
+- Replace configuration in ./switcher.sh to have the internal display preferred config and name

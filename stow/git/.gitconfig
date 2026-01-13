@@ -10,3 +10,5 @@
 	helper = store
 [diff]
     external = difft
+[pull]
+	rebase = false

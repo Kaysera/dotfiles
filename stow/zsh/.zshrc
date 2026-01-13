@@ -19,7 +19,7 @@ eval "$(starship init zsh)"
 source  ~/.antidote/antidote.zsh
 
 # Initialize plugins
-antidote load
+antidote load ~/.zsh_plugins.txt
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -64,3 +64,6 @@ export FZF_DEFAULT_OPTS=" \
 --bind=tab:accept"
 
 export _ZO_FZF_OPTS="${FZF_DEFAULT_OPTS} --preview='ls --color $realpath'"
+
+# opencode
+export PATH=/home/guille/.opencode/bin:$PATH

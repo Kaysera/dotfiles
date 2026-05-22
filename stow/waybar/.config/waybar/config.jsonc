@@ -1,5 +1,6 @@
 {
   "reload_style_on_change": true,
+  "output": ["eDP-1", "DP-1", "DP-2", "HDMI-A-1"],
   "layer": "top",
   "position": "top",
   "spacing": 0,

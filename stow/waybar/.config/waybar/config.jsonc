@@ -13,7 +13,7 @@
     "bluetooth",
     "tray",
     "clock",
-    "battery"
+    "battery",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -25,7 +25,7 @@
       "6": "",
       "7": "󰃭|󰇮",
       "8": "󰠮",
-      "9": "󰒱"
+      "9": "󰒱",
     },
   },
 
@@ -33,7 +33,7 @@
     "format": "{:L%d/%m %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -48,14 +48,14 @@
     "spacing": 1,
     "on-click": "ghostty --class=float.Impala -e ~/.cargo/bin/impala",
   },
-    "custom/power-profile": {
-        "format": "{}",
-        "tooltip": true,
-        // Run the script and update every 5 seconds
-        "exec": "tuned-adm active | awk -F': ' '{print $2}'",
-        "interval": 5,
-        "on-click": "wofi-profile-switcher.sh" // Optional: Run the Wofi switcher script you created
-    },
+  "custom/power-profile": {
+    "format": "{}",
+    "tooltip": true,
+    // Run the script and update every 5 seconds
+    "exec": "tuned-adm active | awk -F': ' '{print $2}'",
+    "interval": 5,
+    "on-click": "wofi-profile-switcher.sh", // Optional: Run the Wofi switcher script you created
+  },
   "battery": {
     "format": "{capacity}% {icon}",
     "format-discharging": "{icon}",
@@ -63,7 +63,7 @@
     "format-plugged": "",
     "format-icons": {
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
@@ -72,15 +72,15 @@
     "on-click": "~/.config/waybar/scripts/omarchy-menu power",
     "states": {
       "warning": 20,
-      "critical": 10
-    }
+      "critical": 10,
+    },
   },
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueman-manager"
+    "on-click": "blueman-manager",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -90,14 +90,14 @@
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
-      "default": ["", "", ""]
-    }
+      "default": ["", "", ""],
+    },
   },
   "tray": {
-    "spacing": 17
+    "spacing": 17,
   },
   "custom/power": {
-    "format" : "⏻",
+    "format": "⏻",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/scripts/power_menu.xml", // Menu file in resources folder
@@ -106,9 +106,9 @@
       "reboot": "reboot",
       "logout": "loginctl terminate-user ''",
       "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
-     },
+      "hibernate": "systemctl hibernate",
+    },
     "min-length": 3,
-    "max-length": 6
+    "max-length": 6,
   },
 }

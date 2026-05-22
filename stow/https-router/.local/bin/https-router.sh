@@ -12,6 +12,10 @@ if [[ "$URL" == *meet.google.com/* ]]; then
     # Case 1: It's a Google Meet link.
     # Launch the dedicated PWA using its App ID.
     "${CHROMIUM_EXEC}" --app="$URL" &
+elif [[ "$URL" == *notion.so/* ]]; then
+        # Case 1: It's a Google Meet link.
+        # Launch the dedicated PWA using its App ID.
+        "${CHROMIUM_EXEC}" --app="$URL" &
 else
     # Case 2: It's any other link.
     # We must explicitly call a known web browser executable (not xdg-open)

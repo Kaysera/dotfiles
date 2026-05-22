@@ -12,3 +12,5 @@
     external = difft
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main

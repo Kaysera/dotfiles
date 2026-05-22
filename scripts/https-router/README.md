@@ -1,0 +1,2 @@
+- Use https-router to open certain links as PWA, so that hyprland can put it in their proper virtual desktops
+- The service and desktop file must be linked first (stow folder), then run the script to make them defaults

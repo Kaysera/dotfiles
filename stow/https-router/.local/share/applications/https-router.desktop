@@ -5,4 +5,4 @@ Exec=/home/guille/.local/bin/https-router.sh %U
 Icon=google-meet
 Terminal=false
 Type=Application
-MimeType=x-scheme-handler/https;
+MimeType=x-scheme-handler/https;x-scheme-handler/http;
